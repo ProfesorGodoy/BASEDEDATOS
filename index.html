@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador SQL Educativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🧑‍🎓 Aprende SQL en la Web</h1>
+    
+    <div>
+        <h3>Crear tabla:</h3>
+        <textarea id="crearTabla" placeholder="Ej: CREATE TABLE clientes (id INT, nombre TEXT);"></textarea>
+        <button onclick="ejecutarSQL('crear')">Ejecutar</button>
+    </div>
+
+    <div>
+        <h3>Insertar datos:</h3>
+        <textarea id="insertarDatos" placeholder="Ej: INSERT INTO clientes VALUES (1, 'Juan');"></textarea>
+        <button onclick="ejecutarSQL('insertar')">Ejecutar</button>
+    </div>
+
+    <div>
+        <h3>Consulta SQL:</h3>
+        <textarea id="consultaSQL" placeholder="Ej: SELECT * FROM clientes;"></textarea>
+        <button onclick="ejecutarSQL('consulta')">Ejecutar Consulta</button>
+    </div>
+
+    <h3>Resultados:</h3>
+    <div id="resultados" style="white-space: pre-wrap; background:#222; color:#0f0; padding:10px; min-height:100px;"></div>
+
+    <!-- Librería sql.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
